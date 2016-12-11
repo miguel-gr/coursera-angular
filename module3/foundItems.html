@@ -1,5 +1,8 @@
 
-<table class="table table-striped">
+<table class="table table-striped" ng-show="menu.found.length">
+    <tr>
+        <th>Name</th><th>Short name</th><th>Description</th><th/>
+    </tr>
     <tr ng-repeat="item in menu.found">
         <td>
             {{ item.name }}
