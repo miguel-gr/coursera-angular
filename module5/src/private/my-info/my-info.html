@@ -1,0 +1,38 @@
+
+<div class="container">
+    <h1 class="text-center">My Info</h1>
+    
+    <div class="col-md-8 col-sm-8 col-xs-12" ng-if="!infoCtrl.userData">
+        bla...
+    </div>
+    <div ng-if="infoCtrl.userData">
+        <div class="col-md-8 col-sm-8 col-xs-12">
+            <table class="table">
+                <tr>
+                    <th scope="row">First Name</th>
+                    <td>{{infoCtrl.userData.firstname}}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Last Name</th>
+                    <td>{{infoCtrl.userData.lastname}}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Email</th>
+                    <td>{{infoCtrl.userData.email}}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Phone</th>
+                    <td>{{infoCtrl.userData.phone}}</td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-12">
+            <!-- {{infoCtrl.userData.dishid}}  -->
+            <strong>Favorite dish:</strong> {{infoCtrl.userData.dishName}}
+            <figure class="figure">
+                <img src="images/menu/{{infoCtrl.userData.dishImageCode}}/{{infoCtrl.userData.dishImageCode}}.jpg"/>
+                <figcaption class="figure-caption">{{infoCtrl.userData.dishDescription}}</figcaption>
+            </figure>
+        </div>
+    </div>
+</div>
