@@ -52,10 +52,10 @@
           ng-model="signUpCtrl.user.dishid"
           required>
           <span ng-if="regForm.favorite.$invalid && regForm.favorite.$touched">
-            Favorite Dish must be a Number
+            Favorite Dish must be a Number (Chef suggestion 877 or any id of <a href="https://davids-restaurant.herokuapp.com/menu_items.json" target="_blank">this list</a>)
           </span>
           <span ng-if="signUpCtrl.foundItem.name=='n/a'">
-            No such menu number exists
+            No such menu number exists (Chef suggestion 877 or any id of <a href="https://davids-restaurant.herokuapp.com/menu_items.json" target="_blank">this list</a>)
           </span>
           <span ng-if="signUpCtrl.foundItem.name && signUpCtrl.foundItem.name!='n/a'">
             {{signUpCtrl.foundItem.name}} is a good choice!
